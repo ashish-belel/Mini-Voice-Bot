@@ -14,6 +14,7 @@ public class SimpleVoiceAssistant {
         } else {
             speak("Sorry, I didn't understand that.");
         }
+        scanner.close();
     }
 
     public static void speak(String message) {
