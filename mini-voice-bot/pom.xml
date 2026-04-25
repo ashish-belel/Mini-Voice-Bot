@@ -1,0 +1,53 @@
+<project>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.voicebot</groupId>
+    <artifactId>mini-voice-bot</artifactId>
+    <version>1.0</version>
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+    </properties>
+
+    <repositories>
+        <repository>
+            <id>central</id>
+            <url>https://repo1.maven.org/maven2/</url>
+        </repository>
+        <repository>
+            <id>marytts</id>
+            <url>https://marytts.github.io/marytts/marytts-repo/</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+
+        <!-- Vosk (Speech-to-Text) -->
+        <dependency>
+            <groupId>com.alphacephei</groupId>
+            <artifactId>vosk</artifactId>
+            <version>0.3.45</version>
+        </dependency>
+
+        <!-- FreeTTS -->
+        <dependency>
+            <groupId>net.sf.sociaal</groupId>
+            <artifactId>freetts</artifactId>
+            <version>1.2.2</version>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.1.0</version>
+                <configuration>
+                    <mainClass>com.voicebot.MiniVoiceBot</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
